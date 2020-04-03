@@ -4,9 +4,7 @@ import cv2
 from base64 import b64decode
 
 
-
 app = Flask(__name__)
-app.run(debug=True)
 
 @app.route("/")
 def index():
@@ -50,3 +48,7 @@ def analyze():
         area = area + cv2.contourArea(cnts[i])
 
     return str(round((count / (h*w))*100, 2))
+
+if __name__ == '__main__':
+    # Threaded option to enable multiple instances for multiple user access support
+    app.run(threaded=True, port=5000)
