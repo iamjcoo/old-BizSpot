@@ -8,4 +8,4 @@ Werkzeug==0.15.6
 requests==2.23.0
 babel==2.8.0
 opencv-python==4.2.0.32
-numpy==1.18.2
+numpy==1.22.0
